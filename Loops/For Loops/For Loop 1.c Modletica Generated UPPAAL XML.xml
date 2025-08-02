@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>
+// Writing the data of preRequisite file
+// Author: smar(t), Vara Ali (t)
+// Credits: Made in collaboration with the Formal Verification Group
+// This file will be as it is copied to the UPPAAL xml
+
+// Purpose of file:
+// This file has some important declarations that are usually in-built in C code or the
+// compiler
+// Hence, these declarations are not found in the code. So we need to provide them here in
+// this file.
+
+// Important Notice:
+// Only make changes to this file if you know UPPAAL syntax. Otherwise, leave this file as
+// it is.
+
+const int int8_smin = -128;
+const int int8_smax = 127;
+const int int8_umin = 0;
+const int int8_umax = 255;
+const int int16_smin = -32768;
+const int int16_smax = 32767;
+const int int16_umin = 0;
+const int int16_umax = 65535;
+const int int32_smin = -2147483648;
+const int int32_smax = 2147483647;
+const int float_min = -12768;
+const int float_max = 12767;
+
+typedef bool BOOL;
+typedef bool Bool;
+typedef bool BOOLEAN;
+typedef bool boolean;
+
+typedef int[int8_smin, int8_smax] char;
+typedef int[int8_umin, int8_umax] CHAR;
+typedef int[int8_umin, int8_umax] byte;
+typedef int[int8_umin, int8_umax] BYTE;
+typedef int[int8_umin, int8_umax] Byte;
+typedef int[int16_smin, int16_smax] short;
+typedef int[int16_umin, int16_umax] unsigned_short;
+
+// int32_smax because uppaal does not accept int32_umax
+typedef int[int32_umin, int32_smax] unsigned_int;
+
+typedef int[int8_umin, int8_umax] unsigned_char;
+typedef int[int8_umin, int8_umax] UNSIGNED_CHAR;
+typedef int[int8_umin, int8_umax] Unsigned_Char;
+typedef int[int8_umin, int8_umax] uchar;
+typedef int[int8_umin, int8_umax] uChar;
+typedef int[int8_umin, int8_umax] UChar;
+typedef int[int8_smin, int8_smax] INT8;
+typedef int[int8_smin, int8_smax] Int8;
+typedef int[int8_smin, int8_smax] int_8;
+typedef int[int8_smin, int8_smax] INT_8;
+typedef int[int8_smin, int8_smax] SINT8;
+typedef int[int8_smin, int8_smax] Sint8;
+typedef int[int8_smin, int8_smax] sint8;
+typedef int[int8_smin, int8_smax] sint_8;
+typedef int[int32_smin, int32_smax] SINT_32;
+typedef int[int32_smin, int32_smax] Sint_32;
+typedef int[int32_smin, int32_smax] SInt_32;
+typedef int[int32_smin, int32_smax] signed_int32;
+typedef int[int32_smin, int32_smax] Signed_Int32;
+typedef int[int32_smin, int32_smax] signed_Int32;
+typedef int[int32_smin, int32_smax] signed_Int_32;
+typedef int[int32_smin, int32_smax] signed_INT32;
+typedef int[int32_umin, int32_smax] UINT32;
+typedef int[int32_umin, int32_smax] UInt32;
+typedef int[int32_umin, int32_smax] Uint32;
+typedef int[int32_umin, int32_smax] uint32;
+typedef int[int32_umin, int32_smax] uint_32;
+typedef int[int32_umin, int32_smax] uintInt32;
+typedef int[int32_umin, int32_smax] UNSIGNED_INT32;
+typedef int[int32_umin, int32_smax] Unsigned_Int32;
+typedef int[int32_umin, int32_smax] unsigned_int32;
+
+typedef int[float_min, float_max] float;
+typedef int[float_min, float_max] FLOAT;
+
+// Cast Expression Start here
+
+byte_toByte(int var)
+{
+    // improve this
+    return (var % int8_smax);
+}
+
+char_toChar(int var)
+{
+    // improve this
+    return (var % int8_smax);
+}
+
+short_toUShort(int var)
+{
+    // do something here
+    return var;
+}
+
+short_toShort(int var)
+{
+    // improve this
+    return (var % int16_smax);
+}
+
+int_toInt(int var)
+{
+    // improve this
+    return (var % int32_smax);
+}
+
+
+//stub ftns start
+//stub ftns end
+// Place declarations here.
+
+chan _s_for_loop_1;
+chan _e_for_loop_1;
+	</declaration>
+	<template>
+		<name x="5" y="5">void__GLOBAL_</name>
+		<parameter>
+		</parameter>
+	<declaration>
+// Place declarations here.
+
+	</declaration>
+		<location id="id0" x="0" y="0" color = "#00ff00">
+		<name x="0" y="0">
+		GLOBAL_START0
+		</name>
+		</location>
+		<location id="id1" x="0" y="50" color = "#00ff00">
+		<name x="0" y="50">
+		GLOBAL_END1
+		</name>
+		</location>
+		<init ref="id0"/>
+		<transition>
+		<source ref="id0"/>
+		<target ref="id1"/>
+		<nail x="0" y="0"/>
+		</transition>
+	</template>
+	<template>
+		<name x="5" y="5">void_for_loop_1</name>
+		<parameter>
+		</parameter>
+	<declaration>
+// Place declarations here.
+
+int i;
+	</declaration>
+		<location id="id0" x="5" y="0" color = "#ffa500">
+		<name x="5" y="0">
+		Ftn_Start_Call0
+		</name>
+		</location>
+		<location id="id1" x="5" y="100" color = "#00ff00">
+		<name x="5" y="100">
+		Start1
+		</name>
+		</location>
+		<location id="id2" x="5" y="200" color = "#c0c0c0">
+		<name x="5" y="200">
+		parameterState2
+		</name>
+		</location>
+		<location id="id3" x="5" y="300" color = "#00ff00">
+		<name x="5" y="300">
+		ForStart3
+		</name>
+		</location>
+		<location id="id4" x="5" y="400" color = "#c0c0c0">
+		<name x="5" y="400">
+		declaration4
+		</name>
+		</location>
+		<location id="id5" x="5" y="500" color = "#c0c0c0">
+		<name x="5" y="500">
+		ForInitilizerEnd5
+		</name>
+		</location>
+		<location id="id6" x="5" y="600" color = "#c0c0c0">
+		<name x="5" y="600">
+		ForCondition6
+		</name>
+		</location>
+		<location id="id7" x="5" y="700" color = "#00ff00">
+		<name x="5" y="700">
+		ForBodyStart7
+		</name>
+		</location>
+		<location id="id8" x="55" y="800" color = "#ff00ff">
+		<name x="55" y="800">
+		ForBodyEnd8
+		</name>
+		</location>
+		<location id="id9" x="105" y="900" color = "#ff00ff">
+		<name x="105" y="900">
+		ForEnd9
+		</name>
+		</location>
+		<location id="id10" x="-20" y="1000" color = "#ff00ff">
+		<name x="-20" y="1000">
+		End10
+		</name>
+		</location>
+		<location id="id11" x="-95" y="1100" color = "#ffa500">
+		<name x="-95" y="1100">
+		Ftn_End_Call11
+		</name>
+		</location>
+		<init ref="id0"/>
+		<transition>
+		<source ref="id0"/>
+		<target ref="id1"/>
+	<label kind="synchronisation" x="5" y="30">_s_for_loop_1?</label>
+		<nail x="5" y="0"/>
+		</transition>
+		<transition>
+		<source ref="id1"/>
+		<target ref="id2"/>
+		<nail x="5" y="100"/>
+		</transition>
+		<transition>
+		<source ref="id2"/>
+		<target ref="id3"/>
+		<nail x="5" y="200"/>
+		</transition>
+		<transition>
+		<source ref="id3"/>
+		<target ref="id4"/>
+	<label kind="assignment" x="5" y="330">i = 0</label>
+		<nail x="5" y="300"/>
+		</transition>
+		<transition>
+		<source ref="id4"/>
+		<target ref="id5"/>
+		<nail x="5" y="400"/>
+		</transition>
+		<transition>
+		<source ref="id5"/>
+		<target ref="id6"/>
+		<nail x="5" y="500"/>
+		</transition>
+		<transition>
+		<source ref="id6"/>
+		<target ref="id7"/>
+	<label kind="guard" x="5" y="630">i&lt;10</label>
+		<nail x="5" y="600"/>
+		</transition>
+		<transition>
+		<source ref="id7"/>
+		<target ref="id8"/>
+		<nail x="55" y="700"/>
+		</transition>
+		<transition>
+		<source ref="id8"/>
+		<target ref="id5"/>
+	<label kind="assignment" x="55" y="770">i++</label>
+		<nail x="55" y="500"/>
+		</transition>
+		<transition>
+		<source ref="id6"/>
+		<target ref="id9"/>
+	<label kind="guard" x="105" y="630">!(i&lt;10)</label>
+		<nail x="105" y="600"/>
+		</transition>
+		<transition>
+		<source ref="id9"/>
+		<target ref="id10"/>
+		<nail x="-20" y="900"/>
+		</transition>
+		<transition>
+		<source ref="id10"/>
+		<target ref="id11"/>
+		<nail x="-95" y="1000"/>
+		</transition>
+		<transition>
+		<source ref="id11"/>
+		<target ref="id0"/>
+	<label kind="synchronisation" x="-95" y="1070">_e_for_loop_1!</label>
+		<nail x="-95" y="0"/>
+		</transition>
+	</template>
+	<system>
+	// Place template instantiations here.
+_GLOBAL_ = void__GLOBAL_();
+for_loop_1 = void_for_loop_1();
+// List one or more processes to be composed into a system.
+system _GLOBAL_, for_loop_1;
+	</system>
+	<queries>
+		<query>
+			<formula>E&lt;&gt; for_loop_1.Ftn_Start_Call0</formula>
+			<comment>DR000: State space reachability of  for_loop_1.Ftn_Start_Call0</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; for_loop_1.Start1</formula>
+			<comment>DR000: State space reachability of  for_loop_1.Start1</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; for_loop_1.parameterState2</formula>
+			<comment>DR000: State space reachability of  for_loop_1.parameterState2</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; for_loop_1.ForStart3</formula>
+			<comment>DR000: State space reachability of  for_loop_1.ForStart3</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; for_loop_1.declaration4</formula>
+			<comment>DR000: State space reachability of  for_loop_1.declaration4</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; for_loop_1.ForInitilizerEnd5</formula>
+			<comment>DR000: State space reachability of  for_loop_1.ForInitilizerEnd5</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; for_loop_1.ForCondition6</formula>
+			<comment>DR000: State space reachability of  for_loop_1.ForCondition6</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; for_loop_1.ForBodyStart7</formula>
+			<comment>DR000: State space reachability of  for_loop_1.ForBodyStart7</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; for_loop_1.ForBodyEnd8</formula>
+			<comment>DR000: State space reachability of  for_loop_1.ForBodyEnd8</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; for_loop_1.ForEnd9</formula>
+			<comment>DR000: State space reachability of  for_loop_1.ForEnd9</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; for_loop_1.End10</formula>
+			<comment>DR000: State space reachability of  for_loop_1.End10</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; for_loop_1.Ftn_End_Call11</formula>
+			<comment>DR000: State space reachability of  for_loop_1.Ftn_End_Call11</comment>
+		</query>
+		<query>
+			<formula>A[] not deadlock</formula>
+			<comment>DR001: At every state the system should never be in a deadlock state {ExpectedResult: True, ActualResult: True}</comment>
+		</query>
+	</queries>
+</nta>
