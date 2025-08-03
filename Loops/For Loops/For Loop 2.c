@@ -10,5 +10,9 @@ void for_loop_2()
 	{
 		int j = 0;
 		j = i;
+		for(j; j<10;j++)
+		{
+			// Another loop
+		}
 	}
 }
