@@ -36,9 +36,9 @@ Modletica generates a set of interconnected states and transitions in the UPPAAL
 
 Refer to the following image for a visual depiction of this mapping:
 
-📷 **Diagram**: [`./mapping diagram/If mapping.drawio.png`](../If%20mapping.drawio.png)
+📷 **Diagram**: [`./mapping diagram/If mapping.drawio.png`](./mapping%20diagram/If%20mapping.drawio.png)
 
-![If Mapping](../If%20mapping.drawio.png)
+![If Mapping](./mapping%20diagram/If%20mapping.drawio.png)
 
 ---
 
