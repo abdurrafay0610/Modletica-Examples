@@ -5,7 +5,7 @@
 
 
 
-void if_conditional_3.c()
+void if_conditional_3()
 {
 	bool condition1 = true;
 	bool condition2 = true;
