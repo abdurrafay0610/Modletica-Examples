@@ -18,6 +18,10 @@ if (condition) {
 
 ## 🧠 Mapping Strategy in Modletica
 
+> 💡 **Note**: If the original C code has an `if` without an `else`, Modletica automatically adds an **empty `else` block**.
+> This ensures the FSM always has a **single-entry, single-exit structure**, making it easier to compose with other mappings.
+
+
 Modletica generates a set of interconnected states and transitions in the UPPAAL model to represent the semantics of the `if-else` construct. The FSM structure ensures that both branches are represented explicitly and flow into a common exit state.
 
 ### 🔄 Mapping Steps
