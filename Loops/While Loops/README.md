@@ -61,7 +61,7 @@ Modletica maps the `while` loop using a repetitive evaluation structure that mir
 ## 🧩 Related Constructs
 
 - [`for` loop mapping](../for/)
-- [`do-while` mapping](../do_while/) (if supported)
+- [`do-while` mapping](../do_while/)
 - [`if-else` conditionals](../if_else/)
 
 ---
