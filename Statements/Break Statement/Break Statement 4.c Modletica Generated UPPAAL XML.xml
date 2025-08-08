@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>
+// Writing the data of preRequisite file
+// Author: Abdur Rafay, Vara Ali
+// This file will be as it is copied to the UPPAAL xml
+
+// Purpose of file:
+// This file has some important declarations that are usually in-built in C code or the
+// compiler
+// Hence, these declarations are not found in the code. So we need to provide them here in
+// this file.
+
+// Important Notice:
+// Only make changes to this file if you know UPPAAL syntax. Otherwise, leave this file as
+// it is.
+
+const int int8_smin = -128;
+const int int8_smax = 127;
+const int int8_umin = 0;
+const int int8_umax = 255;
+const int int16_smin = -32768;
+const int int16_smax = 32767;
+const int int16_umin = 0;
+const int int16_umax = 65535;
+const int int32_smin = -2147483648;
+const int int32_smax = 2147483647;
+const int float_min = -12768;
+const int float_max = 12767;
+
+typedef bool BOOL;
+typedef bool Bool;
+typedef bool BOOLEAN;
+typedef bool boolean;
+
+typedef int[int8_smin, int8_smax] char;
+typedef int[int8_umin, int8_umax] CHAR;
+typedef int[int8_umin, int8_umax] byte;
+typedef int[int8_umin, int8_umax] BYTE;
+typedef int[int8_umin, int8_umax] Byte;
+typedef int[int16_smin, int16_smax] short;
+typedef int[int16_umin, int16_umax] unsigned_short;
+
+// int32_smax because uppaal does not accept int32_umax
+typedef int[int32_umin, int32_smax] unsigned_int;
+
+typedef int[int8_umin, int8_umax] unsigned_char;
+typedef int[int8_umin, int8_umax] UNSIGNED_CHAR;
+typedef int[int8_umin, int8_umax] Unsigned_Char;
+typedef int[int8_umin, int8_umax] uchar;
+typedef int[int8_umin, int8_umax] uChar;
+typedef int[int8_umin, int8_umax] UChar;
+typedef int[int8_smin, int8_smax] INT8;
+typedef int[int8_smin, int8_smax] Int8;
+typedef int[int8_smin, int8_smax] int_8;
+typedef int[int8_smin, int8_smax] INT_8;
+typedef int[int8_smin, int8_smax] SINT8;
+typedef int[int8_smin, int8_smax] Sint8;
+typedef int[int8_smin, int8_smax] sint8;
+typedef int[int8_smin, int8_smax] sint_8;
+typedef int[int32_smin, int32_smax] SINT_32;
+typedef int[int32_smin, int32_smax] Sint_32;
+typedef int[int32_smin, int32_smax] SInt_32;
+typedef int[int32_smin, int32_smax] signed_int32;
+typedef int[int32_smin, int32_smax] Signed_Int32;
+typedef int[int32_smin, int32_smax] signed_Int32;
+typedef int[int32_smin, int32_smax] signed_Int_32;
+typedef int[int32_smin, int32_smax] signed_INT32;
+typedef int[int32_umin, int32_smax] UINT32;
+typedef int[int32_umin, int32_smax] UInt32;
+typedef int[int32_umin, int32_smax] Uint32;
+typedef int[int32_umin, int32_smax] uint32;
+typedef int[int32_umin, int32_smax] uint_32;
+typedef int[int32_umin, int32_smax] uintInt32;
+typedef int[int32_umin, int32_smax] UNSIGNED_INT32;
+typedef int[int32_umin, int32_smax] Unsigned_Int32;
+typedef int[int32_umin, int32_smax] unsigned_int32;
+
+typedef int[float_min, float_max] float;
+typedef int[float_min, float_max] FLOAT;
+
+// Cast Expression Start here
+
+byte_toByte(int var)
+{
+    // improve this
+    return (var % int8_smax);
+}
+
+char_toChar(int var)
+{
+    // improve this
+    return (var % int8_smax);
+}
+
+short_toUShort(int var)
+{
+    // do something here
+    return var;
+}
+
+short_toShort(int var)
+{
+    // improve this
+    return (var % int16_smax);
+}
+
+int_toInt(int var)
+{
+    // improve this
+    return (var % int32_smax);
+}
+
+
+//stub ftns start
+//stub ftns end
+// Place declarations here.
+
+chan _s_nested_loops;
+chan _e_nested_loops;
+	</declaration>
+	<template>
+		<name x="5" y="5">void__GLOBAL_</name>
+		<parameter>
+		</parameter>
+	<declaration>
+// Place declarations here.
+
+	</declaration>
+		<location id="id0" x="0" y="0" color = "#00ff00">
+		<name x="0" y="0">
+		GLOBAL_START0
+		</name>
+		</location>
+		<location id="id1" x="0" y="50" color = "#00ff00">
+		<name x="0" y="50">
+		GLOBAL_END1
+		</name>
+		</location>
+		<init ref="id0"/>
+		<transition>
+		<source ref="id0"/>
+		<target ref="id1"/>
+		<nail x="0" y="0"/>
+		</transition>
+	</template>
+	<template>
+		<name x="5" y="5">void_nested_loops</name>
+		<parameter>
+		</parameter>
+	<declaration>
+// Place declarations here.
+
+bool condition1;
+int i;
+	</declaration>
+		<location id="id0" x="5" y="0" color = "#ffa500">
+		<name x="5" y="0">
+		Ftn_Start_Call0
+		</name>
+		</location>
+		<location id="id1" x="5" y="100" color = "#00ff00">
+		<name x="5" y="100">
+		Start1
+		</name>
+		</location>
+		<location id="id2" x="5" y="200" color = "#c0c0c0">
+		<name x="5" y="200">
+		parameterState2
+		</name>
+		</location>
+		<location id="id3" x="5" y="300" color = "#c0c0c0">
+		<name x="5" y="300">
+		declaration3
+		</name>
+		</location>
+		<location id="id4" x="5" y="400" color = "#00ff00">
+		<name x="5" y="400">
+		ForStart4
+		</name>
+		</location>
+		<location id="id5" x="5" y="500" color = "#c0c0c0">
+		<name x="5" y="500">
+		declaration5
+		</name>
+		</location>
+		<location id="id6" x="5" y="600" color = "#c0c0c0">
+		<name x="5" y="600">
+		ForInitilizerEnd6
+		</name>
+		</location>
+		<location id="id7" x="5" y="700" color = "#c0c0c0">
+		<name x="5" y="700">
+		ForCondition7
+		</name>
+		</location>
+		<location id="id8" x="5" y="800" color = "#00ff00">
+		<name x="5" y="800">
+		ForBodyStart8
+		</name>
+		</location>
+		<location id="id9" x="5" y="900" color = "#c0c0c0">
+		<name x="5" y="900">
+		Expression9
+		</name>
+		</location>
+		<location id="id10" x="5" y="1000" color = "#00ff00">
+		<name x="5" y="1000">
+		WhileStart10
+		</name>
+		</location>
+		<location id="id11" x="5" y="1100" color = "#00ff00">
+		<name x="5" y="1100">
+		WhileLoop11
+		</name>
+		</location>
+		<location id="id12" x="-20" y="1200" color = "#ff0000">
+		<name x="-20" y="1200">
+		break12
+		</name>
+		</location>
+		<location id="id13" x="5" y="1300" color = "#c0c0c0">
+		<name x="5" y="1300">
+		Expression13
+		</name>
+		</location>
+		<location id="id14" x="55" y="1400" color = "#000000">
+		<name x="55" y="1400">
+		WhileBodyEnd14
+		</name>
+		</location>
+		<location id="id15" x="105" y="1500" color = "#ff00ff">
+		<name x="105" y="1500">
+		WhileEnd15
+		</name>
+		</location>
+		<location id="id16" x="5" y="1600" color = "#c0c0c0">
+		<name x="5" y="1600">
+		Expression16
+		</name>
+		</location>
+		<location id="id17" x="155" y="1700" color = "#ff00ff">
+		<name x="155" y="1700">
+		ForBodyEnd17
+		</name>
+		</location>
+		<location id="id18" x="205" y="1800" color = "#ff00ff">
+		<name x="205" y="1800">
+		ForEnd18
+		</name>
+		</location>
+		<location id="id19" x="-20" y="1900" color = "#ff00ff">
+		<name x="-20" y="1900">
+		End19
+		</name>
+		</location>
+		<location id="id20" x="-95" y="2000" color = "#ffa500">
+		<name x="-95" y="2000">
+		Ftn_End_Call20
+		</name>
+		</location>
+		<init ref="id0"/>
+		<transition>
+		<source ref="id0"/>
+		<target ref="id1"/>
+	<label kind="synchronisation" x="5" y="30">_s_nested_loops?</label>
+		<nail x="5" y="0"/>
+		</transition>
+		<transition>
+		<source ref="id1"/>
+		<target ref="id2"/>
+		<nail x="5" y="100"/>
+		</transition>
+		<transition>
+		<source ref="id2"/>
+		<target ref="id3"/>
+	<label kind="assignment" x="5" y="230">condition1 = true</label>
+		<nail x="5" y="200"/>
+		</transition>
+		<transition>
+		<source ref="id3"/>
+		<target ref="id4"/>
+		<nail x="5" y="300"/>
+		</transition>
+		<transition>
+		<source ref="id4"/>
+		<target ref="id5"/>
+	<label kind="assignment" x="5" y="430">i = 0</label>
+		<nail x="5" y="400"/>
+		</transition>
+		<transition>
+		<source ref="id5"/>
+		<target ref="id6"/>
+		<nail x="5" y="500"/>
+		</transition>
+		<transition>
+		<source ref="id6"/>
+		<target ref="id7"/>
+		<nail x="5" y="600"/>
+		</transition>
+		<transition>
+		<source ref="id7"/>
+		<target ref="id8"/>
+	<label kind="guard" x="5" y="730">i&lt;10</label>
+		<nail x="5" y="700"/>
+		</transition>
+		<transition>
+		<source ref="id8"/>
+		<target ref="id9"/>
+	<label kind="assignment" x="5" y="830">i++</label>
+		<nail x="5" y="800"/>
+		</transition>
+		<transition>
+		<source ref="id9"/>
+		<target ref="id10"/>
+		<nail x="5" y="900"/>
+		</transition>
+		<transition>
+		<source ref="id10"/>
+		<target ref="id11"/>
+	<label kind="guard" x="5" y="1030">condition1</label>
+		<nail x="5" y="1000"/>
+		</transition>
+		<transition>
+		<source ref="id11"/>
+		<target ref="id12"/>
+		<nail x="-20" y="1100"/>
+		</transition>
+		<transition>
+		<source ref="id13"/>
+		<target ref="id14"/>
+		<nail x="55" y="1300"/>
+		</transition>
+		<transition>
+		<source ref="id14"/>
+		<target ref="id10"/>
+		<nail x="55" y="1000"/>
+		</transition>
+		<transition>
+		<source ref="id10"/>
+		<target ref="id15"/>
+	<label kind="guard" x="105" y="1030">!(condition1)</label>
+		<nail x="105" y="1000"/>
+		</transition>
+		<transition>
+		<source ref="id12"/>
+		<target ref="id15"/>
+		<nail x="105" y="1200"/>
+		</transition>
+		<transition>
+		<source ref="id15"/>
+		<target ref="id16"/>
+	<label kind="assignment" x="5" y="1530">i++</label>
+		<nail x="5" y="1500"/>
+		</transition>
+		<transition>
+		<source ref="id16"/>
+		<target ref="id17"/>
+		<nail x="155" y="1600"/>
+		</transition>
+		<transition>
+		<source ref="id17"/>
+		<target ref="id6"/>
+	<label kind="assignment" x="155" y="1670">i++</label>
+		<nail x="155" y="600"/>
+		</transition>
+		<transition>
+		<source ref="id7"/>
+		<target ref="id18"/>
+	<label kind="guard" x="205" y="730">!(i&lt;10)</label>
+		<nail x="205" y="700"/>
+		</transition>
+		<transition>
+		<source ref="id18"/>
+		<target ref="id19"/>
+		<nail x="-20" y="1800"/>
+		</transition>
+		<transition>
+		<source ref="id19"/>
+		<target ref="id20"/>
+		<nail x="-95" y="1900"/>
+		</transition>
+		<transition>
+		<source ref="id20"/>
+		<target ref="id0"/>
+	<label kind="synchronisation" x="-95" y="1970">_e_nested_loops!</label>
+		<nail x="-95" y="0"/>
+		</transition>
+	</template>
+	<system>
+	// Place template instantiations here.
+_GLOBAL_ = void__GLOBAL_();
+nested_loops = void_nested_loops();
+// List one or more processes to be composed into a system.
+system _GLOBAL_, nested_loops;
+	</system>
+	<queries>
+		<query>
+			<formula>E&lt;&gt; nested_loops.Ftn_Start_Call0</formula>
+			<comment>DR000: State space reachability of  nested_loops.Ftn_Start_Call0</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.Start1</formula>
+			<comment>DR000: State space reachability of  nested_loops.Start1</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.parameterState2</formula>
+			<comment>DR000: State space reachability of  nested_loops.parameterState2</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.declaration3</formula>
+			<comment>DR000: State space reachability of  nested_loops.declaration3</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.ForStart4</formula>
+			<comment>DR000: State space reachability of  nested_loops.ForStart4</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.declaration5</formula>
+			<comment>DR000: State space reachability of  nested_loops.declaration5</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.ForInitilizerEnd6</formula>
+			<comment>DR000: State space reachability of  nested_loops.ForInitilizerEnd6</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.ForCondition7</formula>
+			<comment>DR000: State space reachability of  nested_loops.ForCondition7</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.ForBodyStart8</formula>
+			<comment>DR000: State space reachability of  nested_loops.ForBodyStart8</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.Expression9</formula>
+			<comment>DR000: State space reachability of  nested_loops.Expression9</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.WhileStart10</formula>
+			<comment>DR000: State space reachability of  nested_loops.WhileStart10</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.WhileLoop11</formula>
+			<comment>DR000: State space reachability of  nested_loops.WhileLoop11</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.break12</formula>
+			<comment>DR000: State space reachability of  nested_loops.break12</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.Expression13</formula>
+			<comment>DR000: State space reachability of  nested_loops.Expression13</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.WhileBodyEnd14</formula>
+			<comment>DR000: State space reachability of  nested_loops.WhileBodyEnd14</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.WhileEnd15</formula>
+			<comment>DR000: State space reachability of  nested_loops.WhileEnd15</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.Expression16</formula>
+			<comment>DR000: State space reachability of  nested_loops.Expression16</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.ForBodyEnd17</formula>
+			<comment>DR000: State space reachability of  nested_loops.ForBodyEnd17</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.ForEnd18</formula>
+			<comment>DR000: State space reachability of  nested_loops.ForEnd18</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.End19</formula>
+			<comment>DR000: State space reachability of  nested_loops.End19</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; nested_loops.Ftn_End_Call20</formula>
+			<comment>DR000: State space reachability of  nested_loops.Ftn_End_Call20</comment>
+		</query>
+		<query>
+			<formula>A[] not deadlock</formula>
+			<comment>DR001: At every state the system should never be in a deadlock state {ExpectedResult: True, ActualResult: True}</comment>
+		</query>
+	</queries>
+</nta>
