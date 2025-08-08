@@ -81,7 +81,7 @@ switch (x) {
 
 ## 🧩 Related Constructs
 
-- [`for` loop mapping](../for/)
+- [`for` loop mapping](../../Loops/For%20Loops/)
 - [`while` loop mapping](../while/)
 - [`do-while` loop mapping](../do_while/)
 - [`switch` statement mapping](../switch/)
