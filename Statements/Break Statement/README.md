@@ -66,7 +66,7 @@ switch (x) {
 **Mapping behaviour in Modletica:**
 - The `break` exits **only** the `switch` in which it is contained.
 - Control moves directly to the `switch end` state.
-- More details of `break` handling in `switch` are documented in the [Switch Statement Mapping](../../conditionals/Switch%mapping/).
+- More details of `break` handling in `switch` are documented in the [Switch Statement Mapping](../../conditionals/Switch%20mapping/).
 
 ---
 
