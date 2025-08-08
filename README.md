@@ -27,14 +27,13 @@ This repository aims to:
 ├── 📁 pointers/
 ├── 📁 examples/
 ├── README.md
-└── ... (coming soon: mapping_readmes/)
 ```
 
 Each subdirectory contains:
 - ✅ **Original C code**
-- 🔁 **UPPAAL model file (.xml/.xta)**
+- 🔁 **UPPAAL model file (.xml)**
 - 📷 **UPPAAL diagram screenshot** (optional)
-- 📄 **Explanation of the mapping** (in upcoming mapping-specific READMEs)
+- 📄 **Explanation of the mapping** (in mapping-specific READMEs)
 
 ## 📌 What’s Covered
 
@@ -64,7 +63,7 @@ This repository illustrates how Modletica maps the following C constructs to UPP
 1. Browse the folders for your construct of interest.
 2. Open the C code to understand the input.
 3. Review the UPPAAL model and mapping explanation.
-4. Load the `.xml` or `.xta` file in UPPAAL to simulate and verify.
+4. Load the `.xml`  file in UPPAAL to simulate and verify.
 
 ## 📚 Coming Soon
 
