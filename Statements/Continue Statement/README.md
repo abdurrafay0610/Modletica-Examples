@@ -85,8 +85,8 @@ while (condition) {
 
 - [`for` loop mapping](../../Loops/For%20Loops/)
 - [`while` loop mapping](../../Loops/While%20Loops/)
-- [`do-while` loop mapping](../../Loops/Do%20While/)
-- [`break` statement mapping](../Break%20Statement%20mapping/)
+- [`do-while` loop mapping](../../Loops/Do%20While%20Loops/)
+- [`break` statement mapping](../Break%20Statement/)
 
 ---
 
