@@ -83,10 +83,10 @@ while (condition) {
 
 ## 🧩 Related Constructs
 
-- [`for` loop mapping](../../loops/for%20loop/for-mapping.md)
-- [`while` loop mapping](../../loops/while/while-mapping.md)
-- [`do-while` loop mapping](../../loops/do-while/do-while-mapping.md)
-- [`break` statement mapping](../break%20statement%20mapping/break-mapping.md)
+- [`for` loop mapping](../../Loops/For%20Loops/)
+- [`while` loop mapping](../../Loops/While%20Loops/)
+- [`do-while` loop mapping](../../Loops/Do%20While/)
+- [`break` statement mapping](../Break%20Statement%20mapping/)
 
 ---
 
