@@ -39,9 +39,9 @@ Ternary operators are **expressions**, not statements. Therefore, Modletica tran
 
 ### 🖼 Diagram
 
-📷 **Diagram**: [`ternary_mapping.drawio.png`](./mapping%20diagram/ternary_mapping.drawio.png)
+📷 **Diagram**: [`./mapping diagram/ternary.drawio.png`](./mapping%20diagram/ternary.drawio.png)
 
-![Ternary Mapping](./mapping%20diagram/ternary_mapping.drawio.png)
+![Ternary Mapping](./mapping%20diagram/ternary.drawio.png)
 
 ---
 
