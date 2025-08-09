@@ -77,7 +77,7 @@ This same logic is reflected in the UPPAAL FSM structure.
 
 ## 🧩 Related Constructs
 
-- [`if-else` mapping](../if_else/)
+- [`if-else` mapping](../if%20mapping/)
 - [`conditional expressions`](../conditionals/)
 - [`function call` mapping](../function_calls/)
 
