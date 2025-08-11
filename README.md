@@ -19,7 +19,6 @@ This repository aims to:
 ├── 📁 datatypes/
 ├── 📁 statements/
 ├── 📁 operators/
-├── 📁 functions/
 ├── 📁 function_calls/
 ├── 📁 loops/
 ├── 📁 conditionals/
