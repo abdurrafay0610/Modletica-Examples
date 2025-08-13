@@ -80,7 +80,7 @@ int add(int x, int y) {
 
 ## 🔗 Related Mappings
 
-- [Function Call Mapping](../function_calls/function-call-mapping.md)
+- [Function Call Mapping](../Function%20Call/)
 - [Return Statement Mapping](../statements/return%20statement%20mapping/return-mapping.md)
 
 ---
