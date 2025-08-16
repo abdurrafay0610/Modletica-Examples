@@ -16,15 +16,15 @@ This repository aims to:
 
 ```
 📦 modletica-mappings/
-├── 📁 datatypes/
-├── 📁 statements/
-├── 📁 operators/
-├── 📁 function_calls/
-├── 📁 loops/
 ├── 📁 conditionals/
-├── 📁 switch_case/
+├── 📁 docs/
+├── 📁 Function Call/
+├── 📁 Function Definition/
+├── 📁 Loops/
+├── 📁 statements/
+├── 📁 datatypes/
+├── 📁 operators/
 ├── 📁 pointers/
-├── 📁 examples/
 ├── README.md
 ```
 
