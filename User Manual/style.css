@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    padding: 20px;
+    background-color: lightgray;
+    overflow: auto;
+}
+
+button {
+    background-color: lightblue;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+.tabcontent {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+h1, h2 {
+    color: darkblue;
+    font-weight: bold;
+}
+
+.codeIndentClass {
+    margin-left: 50px;
+}
+
+/* Add these lines */
+#main-content {
+    margin-left: 250px;  /* or any value you prefer */
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #E5E5E5;
+}
+
+img {
+    width: 60%;     /* This will make the image as wide as its container allows */
+    height: auto;   /* This keeps the aspect ratio of the image */
+}
+
+video {
+    width: 60%;     /* This will make the video as wide as its container allows */
+    height: auto;   /* This keeps the aspect ratio of the image */
+}

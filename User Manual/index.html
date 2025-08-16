@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>User Manual: Modletica</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js"></script>
+	</head>
+	
+	<body>
+		<!-- This is our side bar, it will contain the table of contents -->
+		<div id="sidebar">
+			<h2>Table of Contents</h2>
+			<ul>
+				<li><a href="#heading0">0. About</a></li>
+				<li><a href="#heading1">1. Purpose</a></li>
+				<li><a href="#heading2">2. Scope</a></li>
+				<li><a href="#heading3">3. References</a></li>
+				<li><a href="#heading4">4. Abbreviations</a></li>
+				<li><a href="#heading5">5. Definitions</a></li>
+				<li><a href="#heading6">6. Responsibilities</a></li>
+				<li><a href="#heading7">7. Assumptions</a></li>
+				<li><a href="#heading8">8. Procedure</a></li>
+				<li><a href="#heading9">9. Form/Related Documents</a></li>
+			</ul>
+			<!-- Add more headings as needed -->
+		</div>
+
+		<div id="main-content">
+			<h1 style="text-align: center">User Manual: Modletica</h1>
+			
+			<h1 id="heading0">0. About</h1>
+				<button onclick="toggleExpand('About')" id="expandBtn">Expand/Retract</button>
+				<div id="About" style="display:none">
+					<table>
+						<tr>
+							<th>Document No:</th>
+							<th>Issue Date:</th>
+							<th>Revision No:</th>
+							<th>Revision Date:</th>
+						</tr>
+						<tr>
+							<td>Modletica/UserManual/01-00</td>
+							<td>19-03-2025</td>
+							<td>03</td>
+							<td>09-08-2025</td>
+						</tr>
+						<tr>
+							<th>Prepared By:</th>
+							<th>Reviewed By:</th>
+							<th>Approved By:</th>
+							<th>Approved Date:</th>
+						</tr>
+						<tr>
+							<td>Abdur Rafay</td>
+							<td>Dr. Kashif Saghar Dir</td>
+							<td>Dr. Atif Aftab Ahmed Jilani</td>
+							<td>dd-mm-yyyy</td>
+						</tr>
+					</table>
+				</div>
+
+			<h1 id="heading1">1. Purpose</h1>
+				<button onclick="toggleExpand('Purpose')" id="expandBtn">Expand/Retract Purpose</button>
+				<div id="Purpose" style="display:none">
+					<div class="codeIndentClass">
+						The purpose of this document is to provide a clear and comprehensive
+						guide on how to use the Modletica tool to generate
+						an UPPAAL model from C code.<br>
+						Modletica is a custom built tool for the automated model extraction
+						from C code.
+					</div>
+				</div>
+
+			<h1 id="heading2">2. Scope</h1>
+				<button onclick="toggleExpand('Scope')" id="expandBtn">Expand/Retract Scope</button>
+				<div id="Scope" style="display:none">
+					<div class="codeIndentClass">
+						This document will discuss step-by-step on how to generate an UPPAAL
+						model from C code using the tool Modletica.
+						<br>
+						This document will also discuss some pre-processing that is required
+						before providing the files to the tool. (Discussed further in the WI)
+						<br>
+						<br>
+						<p><strong>
+						This document will not discuss the internal workings of Modletica.
+						However, a reference to the Github: Modletica-Example will be given if any are interested in it.
+						This github link contains detailed documentation and examples on how modletica converts C concepts to UPPAAL.
+						<a href="https://github.com/abdurrafay0610/Modletica-Examples" target="_blank">ref 3.2.1</a>
+						</strong></p>
+					</div>
+				</div>
+
+			<h1 id="heading3">3. References</h1>
+				<button onclick="toggleExpand('References')" id="expandBtn">Expand/Retract References</button>
+				<div id="References" style="display:none">
+					<div class="codeIndentClass">
+						<!-- Primary References -->
+						<button onclick="toggleExpand('Primary References')" id="expandBtn">3.1. Expand/Retract Primary References</button>
+						<div id="Primary References" style="display:none">
+							<div class="codeIndentClass">
+								<a href="https://www.oracle.com/java/technologies/javase/jdk19-archive-downloads.html" target="_blank">3.1.1. Java JDK 19</a><br>
+								<a href="./Software/Modletica 4.1.jar" target="_blank">3.1.2. Modletica: Runnable jar</a><br>
+								<a href="./documents/user_defined_datatypes.txt" target="_blank">3.1.3. Modletica: user_defined_datatypes</a><br>
+								<a href="./Software/gcc-4.7.0-64.exe" target="_blank">3.1.4. GCC Compiler Executable</a>
+							</div>
+						</div>
+						<br>
+						<!-- Secondary References -->
+						<button onclick="toggleExpand('Secondary References')" id="expandBtn">3.2. Expand/Retract Secondary References</button>
+						<div id="Secondary References" style="display:none">
+							<div class="codeIndentClass">
+								<a href="https://github.com/abdurrafay0610/Modletica-Examples" target="_blank">3.2.1. Modletica: Examples Github Link</a><br>
+								<a href="./images/RunningExample.mp4" target="_blank">3.2.2. Video for Running Example for Modletica.</a><br>
+								<a href="./documents/RunningExample.rar" target="_blank">3.2.3. Sample Output XML</a><br>
+								<!-- Add more references as needed -->
+							</div>
+						</div>
+					</div>
+				</div>
+						
+			<h1 id="heading4">4. Abbreviations</h1>
+				<button onclick="toggleExpand('Abbreviations')" id="expandBtn">Expand/Retract Abbreviations</button>
+				<div id="Abbreviations" style="display:none">
+					<div class="codeIndentClass">
+						<table>
+							<tr>
+								<th>4.1.</th>
+								<th>FSM:</th>
+								<td>Finite State Machine</td>
+							</tr>
+							<!-- Add more Abbreviations as needed -->
+						</table>
+					</div>
+				</div>
+
+			<h1 id="heading5">5. Definitions</h1>
+				<button onclick="toggleExpand('Definitions')" id="expandBtn">Expand/Retract Definitions</button>
+				<div id="Definitions" style="display:none">
+					<div class="codeIndentClass">
+						<table>
+							<tr>
+								<th>5.1.</th>
+									<th>Modletica:</th>
+									<td>A custom built C to UPPAAL model extractor.</td>
+							</tr>
+							<tr>
+								<th>5.2.</th>
+								<th>user_defined_datatypes:</th>
+								<td>
+								  This is a file that contains common user defined data types.
+								  <a href="./documents/user_defined_datatypes.txt" target="_blank">ref 3.1.3</a><br>
+								  This is like a helper file that we provide to our code for smooth C to model conversion.<br>
+								  This file is as-it-is copy pasted to UPPAAL, so if you are aware of the UPPAAL syntax,
+								  you can modify the file.
+								</td>
+							</tr>
+							<tr>
+								<th>5.3.</th>
+								<th>Defined Functions:</th>
+								<td>
+								  This term refers to functions who were called and whose definition were found in the code provided by the user.
+								</td>
+							</tr>
+							<tr>
+								<th>5.4.</th>
+								<th>Undefined Functions:</th>
+								<td>
+								This term refers to functions who were called but their
+								definition were not found in the code provided by the user.
+								</td>
+							</tr>
+							<tr>
+								<th>5.5.</th>
+								<th>Undefined Variables:</th>
+								<td>
+								This term refers to variables who are being used, but their
+								declaration were not found in the code provided by the user.
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+			<h1 id="heading6">6. Responsibilities</h1>
+				<button onclick="toggleExpand('Responsibilities')" id="expandBtn">Expand/Retract Responsibilities</button>
+				<div id="Responsibilities" style="display:none">
+					<div class="codeIndentClass">
+						6.1. The formal verification engineer may use this tool for creating models from C code for UPPAAL.<br>
+						6.2. For any issue/bug found in Modletica, kindly contact Abdur Rafay (abdurrafay0610@gmail.com) or add an issue to the respository with an example <a href="https://github.com/abdurrafay0610/Modletica-Examples" target="_blank">ref 3.2.1</a>, to have it resolved.<br>
+					</div>
+				</div>
+
+			<h1 id="heading7">7. Assumptions</h1>
+				<button onclick="toggleExpand('Assumptions')" id="expandBtn">Expand/Retract Assumptions</button>
+				<div id="Assumptions" style="display:none">
+					<div class="codeIndentClass">
+						7.1. Assumptions to run (modletica the tool):<br>
+						<div class="codeIndentClass">
+							7.1.1. JDK 19 (or above) version is installed on your system. <a href="https://www.oracle.com/java/technologies/javase/jdk19-archive-downloads.html" target="_blank">ref 3.1.1</a><br>
+							7.1.2. GCC/G++ Compilers should be accessible from the terminal. <a href="./Software/gcc-4.7.0-64.exe" target="_blank">ref 3.1.4</a><br>
+							7.1.3. The operating system should be Windows.<br>
+						</div>
+						7.2. Assumptions for the code (from which we want to extract model from):<br>
+						<div class="codeIndentClass">
+							7.2.1. The code should be written in C language.<br>
+							7.2.2. The code should be error free (it should not have any syntax errors).<br>
+							7.2.3. The code should be in a compilable form.<br>
+							7.2.4. There should be no variable shadowing in the code.<br>
+							7.2.5. There is no recursion used in the code.<br>
+						</div>
+						<p style="color:orange;">
+						If any of these assumptions are not met, than there is no guarantee that the output model will be correct.<br>
+						</p>
+					</div>
+				</div>
+
+			<h1 id="heading8">8. Procedure</h1>
+				<button onclick="toggleExpand('Procedure')" id="expandBtn">Expand/Retract Procedure</button>
+				<div id="Procedure" style="display:none">
+					<div class="codeIndentClass">
+						<!-- 8.0. GCC/G++ Preprocessing -->
+						<button onclick="toggleExpand('GCC/G++ Preprocessing')" id="expandBtn">GCC/G++ Preprocessing</button>
+						<div id="GCC/G++ Preprocessing" style="display:none">
+							<div class="codeIndentClass">
+								8.0. Following preprocessing must be done (to expand macros) before providing the files to modletica:<br>
+								<div class="codeIndentClass">
+									8.0.1. Open your powershell or terminal.<br>
+									8.0.2. Run the command:<br>
+									<p style="color:green; border:1px solid black; padding:10px;">gcc --version</p>
+									It should show the gcc version. If not then install gcc installer.
+									<a href="./Software/gcc-4.7.0-64.exe" target="_blank">ref 3.1.4</a><br>
+								
+
+									<button onclick="toggleExpand('gcc terminal 1.png')" id="expandBtn">Expand/Retract Image</button>
+									<div id="gcc terminal 1.png" style="display:none">
+										<img src="../images/gcc terminal 1.png" alt="gcc terminal 1.png"><br>
+									</div>
+									<br>
+
+									<button onclick="toggleVideoExpand('RunningExample0.mp4', 'RunningExample0.mp4', 16)" id="expandBtn">Expand/Retract Video</button>
+									<div id="RunningExample0.mp4" style="display:none">
+										<video id="RunningExample0.mp4" controls>
+										<source src="../images/RunningExample.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+										</video>
+									</div>
+									<br><br>
+
+									8.0.3. For each of your files run the command (Replace "filename" with your actual filename):<br>
+									<p style="color:green; border:1px solid black; padding:10px;">gcc -E filename.c > filename_solved.c</p>
+
+									<button onclick="toggleVideoExpand('RunningExample1.mp4', 'RunningExample1.mp4', 29)" id="expandBtn">Expand/Retract Video</button>
+									<div id="RunningExample1.mp4" style="display:none">
+									  <video id="RunningExample1.mp4" controls>
+										<source src="../images/RunningExample.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									  </video>
+									</div>
+									<br><br>
+
+									8.0.4. Your filename_solved.c file now should have all of your libraries and macros preprocessed.<br>
+									8.0.5. You cannot pass the file "filename_solved.c" as it is to the tool. You need to do the following:<br>
+									<div class="codeIndentClass">
+										8.0.5.1. The processed file will contain both expanded libraries and macros.<br>
+										8.0.5.2. Create a new file (this is compulsory).<br>  
+										8.0.5.3. Copy the processed file content (except the expanded libraries) to the new created file.<br>  
+										8.0.5.4. When prompted in the preceding steps, provide these .c/.h files to the tool.<br>  
+									</div>
+
+									<button onclick="toggleVideoExpand('RunningExample2.mp4', '_RunningExample2.mp4', 59)" id="expandBtn">Expand/Retract Video</button>  
+									<div id="RunningExample2.mp4" style="display:none">  
+									  <video id="_RunningExample2.mp4" controls>  
+										<source src="./images/RunningExample.mp4" type="video/mp4">  
+										Your browser does not support the video tag.  
+									  </video>  
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+						<button onclick="toggleExpand('Modletica')" id="expandBtn">Modletica</button>  
+						<div id="Modletica" style="display:none">  
+							<div class="codeIndentClass">  
+								<!-- 8.1. How to run Modletica -->  
+								8.1 Run the Modletica tool.<br>  
+									<div class="codeIndentClass">  
+										<!-- 8.1.1 How to run Modletica (Runnable Jar) -->  
+										8.1.1.1. Download the latest runnable jar from the  
+										<a href="./Software/Modletica 4.1.jar" target="_blank">ref 3.1.2</a><br>  
+										8.1.1.2. Double click on the downloaded jar file. It should start the Modletica tool.<br>  
+
+										<button onclick="toggleVideoExpand('RunningExample3.mp4', '_RunningExample3.mp4', 176)" id="expandBtn">Expand/Retract Video</button>  
+										<div id="RunningExample3.mp4" style="display:none">  
+											<video id="_RunningExample3.mp4" controls>  
+											<source src="./images/RunningExample.mp4" type="video/mp4">  
+											Your browser does not support the video tag.  
+											</video>  
+										</div>  
+									</div>     
+
+								<!-- 8.2. Directory Management Screen -->  
+								8.2. Following working directories must be selected before proceeding:<br>  
+								<div class="codeIndentClass">
+									8.2.1. Choose a log directory. All the logs created by the tool (for debugging purposes) will be created/stored in this directory.<br>
+									
+									<button onclick="toggleExpand('MainPage 1.png')" id="expandBtn">Expand/Retract Image</button>
+									<div id="MainPage 1.png" style="display:none">
+									  <img src="../images/MainPage 1.png" alt="MainPage 1.png"><br>
+									</div>
+									<br>
+									
+									<button onclick="toggleVideoExpand('RunningExample4.mp4', 'RunningExample4.mp4', 182)" id="expandBtn">Expand/Retract Video</button>
+									<div id="RunningExample4.mp4" style="display:none">
+									  <video id="RunningExample4.mp4" controls>
+										<source src="../images/RunningExample4.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									  </video>
+									</div>
+									<br>
+									
+									8.2.2. Choose an xml directory. The final created xml (the UPPAAL model) will be saved/created/stored in this directory.<br>
+
+									<button onclick="toggleExpand('MainPage 2.png')" id="expandBtn">Expand/Retract Image</button>
+									<div id="MainPage 2.png" style="display:none">
+									  <img src="../images/MainPage 2.png" alt="MainPage 2.png"><br>
+									</div>
+									<br>
+									
+									<button onclick="toggleVideoExpand('RunningExample5.mp4', 'RunningExample5.mp4', 207)" id="expandBtn">Expand/Retract Video</button>
+									<div id="RunningExample5.mp4" style="display:none">
+									  <video id="RunningExample5.mp4" controls>
+										<source src="../images/RunningExample5.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									  </video>
+									</div>
+									<br>
+
+									8.2.3. Provide the tool with a *Predefined data type* file. You can either create your own file or provide the tool with the already made file.  
+									<a href="./documents/user_defined_datatypes.txt" target="_blank">ref 3.1.3</a><br>
+
+									<button onclick="toggleExpand('MainPage 3.png')" id="expandBtn">Expand/Retract Image</button>
+									<div id="MainPage 3.png" style="display:none">
+									  <img src="../images/MainPage 3.png" alt="MainPage 3.png"><br>
+									</div>
+									<br>
+
+									<button onclick="toggleVideoExpand('RunningExample6.mp4', 'RunningExample6.mp4', 221)" id="expandBtn">Expand/Retract Video</button>
+									<div id="RunningExample6.mp4" style="display:none">
+									  <video id="RunningExample6.mp4" controls>
+										<source src="./images/RunningExample.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									  </video>
+									</div>
+									<br>
+
+									8.2.4. Press the continue button to go to the next screen which is "Files Management Page".<br>
+
+									<button onclick="toggleExpand('MainPage 4.png')" id="expandBtn">Expand/Retract Image</button>
+									<div id="MainPage 4.png" style="display:none">
+									  <img src="./images/MainPage 4.png" alt="MainPage 4.png"><br>
+									</div>
+									<br>
+									
+									<button onclick="toggleVideoExpand('RunningExample7.mp4', 'RunningExample7.mp4', 240)" id="expandBtn">Expand/Retract Video</button>
+									<div id="RunningExample7.mp4" style="display:none">
+									  <video id="RunningExample7.mp4" controls>
+										<source src="./images/RunningExample.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									  </video>
+									</div>
+									<br>
+								</div>
+								<!-- 8.3. Files Management Screen -->
+								8.3. On the "Files Management Page" take the following steps:
+									<div class="codeIndentClass">
+										8.3.1. At this point you need to provide your C files to the tool. The tool will extract the model from these files.  
+										Be sure to provide all the files that are relevant to the code that you want to extract a model from.  
+										You can provide the tool with C files in 2 ways:<br>
+											<div class="codeIndentClass">
+												8.3.1.1. By clicking the "Add C File" option and give it the C files one-by-one.<br>
+
+												<button onclick="toggleExpand('File Management 1.png')" id="expandBtn">Expand/Retract Image</button>
+												<div id="File Management 1.png" style="display:none">
+												  <img src="./images/File Management 1.png" alt="File Management 1.png"><br>
+												</div>
+												<br>
+
+												<button onclick="toggleVideoExpand('RunningExample8.mp4', 'RunningExample8.mp4', 245)" id="expandBtn">Expand/Retract Video</button>
+												<div id="RunningExample9.mp4"
+													 style="display:none">
+												  <video id="RunningExample9.mp4" controls>
+													<source src="./images/RunningExample9.mp4"
+															type="video/mp4">
+													Your browser does not support the video tag.
+												  </video>
+												</div>
+												<br>
+
+												8.3.1.2. By clicking on the “Add Directory” option and provide it with the directory that contain all the relevant source files.
+												The tool will automatically extract all .c and .h files.<br>
+
+												<button onclick="toggleExpand('File Management 2.png')" id="expandBtn">Expand/Retract Image</button>
+												<div id="File Management 2.png" style="display:none">
+												  <img src="./images/File Management 2.png" alt="File Management 2.png"><br>
+												</div>
+												<br>
+
+												<button onclick="toggleVideoExpand('RunningExample9.mp4', 'RunningExample9.mp4', 276)" id="expandBtn">Expand/Retract Video</button>
+												<div id="RunningExample9.mp4" style="display:none">
+												  <video id="RunningExample9.mp4" controls>
+													<source src="./images/RunningExample9.mp4" type="video/mp4">
+													Your browser does not support the video tag.
+												  </video>
+												</div>
+												<br>
+											</div>
+
+										8.3.2. If you want to remove any file:<br>
+											<div class="codeIndentClass">
+												8.3.2.1. Select the file from the drop down. And press the “Remove” option to remove it.<br>
+
+												<button onclick="toggleExpand('File Management 3.png')" id="expandBtn">Expand/Retract Image</button>
+												<div id="File Management 3.png" style="display:none">
+													<img src="./images/File Management 3.png" alt="File Management 3.png"><br>
+												</div>
+												<br>
+
+												<button onclick="toggleVideoExpand('RunningExample10.mp4', 'RunningExample10.mp4', 305)" id="expandBtn">Expand/Retract Video</button>
+												<div id="RunningExample10.mp4" style="display:none">
+												  <video id="RunningExample10.mp4" controls>
+													<source src="./images/RunningExample.mp4" type="video/mp4">
+													Your browser does not support the video tag.
+												  </video>
+												</div>
+												<br>
+
+												8.3.2.2. Alternately, you can remove all the files using the "Remove All" option.<br>
+
+												<button onclick="toggleExpand('File Management 4.png')" id="expandBtn">Expand/Retract Image</button>
+												<div id="File Management 4.png" style="display:none">
+												  <img src="./images/File Management 4.png" alt="File Management 4.png"><br>
+												</div>
+												<br>
+
+												<button onclick="toggleVideoExpand('RunningExample11.mp4', 'RunningExample11.mp4', 315)" id="expandBtn">Expand/Retract Video</button>
+												<div id="RunningExample11.mp4" style="display:none">
+												  <video id="RunningExample11.mp4" controls>
+													<source src="./images/RunningExample.mp4" type="video/mp4">
+													Your browser does not support the video tag.
+												  </video>
+												</div>
+												<br>
+											</div>
+
+										8.3.3. If you want to make any changes in the previous page, press the "Back" button.<br>
+										8.3.4. Otherwise, press "Continue". At this point the tool will process the files, and it may take a few minutes.  
+										While the tool is processing the files, it will be not responsive.  
+										When the files have been processed, the tool will take you to the "Function Management Page".<br>
+									</div>
+								<!-- 8.4. Function Management Screen -->
+								8.4. On the "Function Management Page" take the following steps:<br>
+									<div class="codeIndentClass">
+										8.4.1. To add any function whose model you want to extract,  
+										simply select the function from the drop down and press the "Add" button.<br>
+									
+
+										<button onclick="toggleExpand('Function Management 1.png')" id="expandBtn">Expand/Retract Image</button>
+										<div id="Function Management 1.png" style="display:none">
+										  <img src="./images/Function Management 1.png" alt="Function Management 1.png"><br>
+										</div>
+										<br>
+
+										<button onclick="toggleVideoExpand('RunningExample12.mp4', 'RunningExample12.mp4', 350)" id="expandBtn">Expand/Retract Video</button>
+										<div id="RunningExample12.mp4" style="display:none">
+										  <video id="RunningExample12.mp4" controls>
+											<source src="./images/RunningExample.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										  </video>
+										</div>
+										<br>
+
+										8.4.2. If you want to see some statistics related to the function. Take the following steps:<br>
+										<div class="codeIndentClass">
+											8.4.2.1. Select the function from the drop down and then press the "Inspect" button.<br>
+											This will open the inspect screen.<br>
+										
+											<button onclick="toggleExpand('Function Management 2.png')" id="expandBtn">Expand/Retract Image</button>
+											<div id="Function Management 2.png" style="display:none">
+											  <img src="./images/Function Management 2.png" alt="Function Management 2.png"><br>
+											</div>
+											<br>
+
+											<button onclick="toggleVideoExpand('RunningExample13.mp4', 'RunningExample13.mp4', 363)" id="expandBtn">Expand/Retract Video</button>
+											<div id="RunningExample13.mp4" style="display:none">
+											  <video id="RunningExample13.mp4" controls>
+												<source src="./images/RunningExample.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											  </video>
+											</div>
+											<br>
+
+											8.4.2.2. The inspect screen will tell you the following info about the function:<br>
+											<div class="codeIndentClass">
+												8.4.2.2.1. The total number of "defined functions" (ref 5.3) along with their names in the selected function.<br>
+												8.4.2.2.2. The total number of "undefined functions" (ref 5.4) along with their names in the selected function.<br>
+												8.4.2.2.3. The total number of "Global Variables" along with their names in the
+													selected function.<br>
+												8.4.2.4. The total number of "Local Variables" along with their names in the selected function.<br>
+												8.4.2.5. The total number of "Undefined Variables" (ref 5.6) along with their names in the selected function.<br>
+
+												<button onclick="toggleExpand('Function Management 3.png')" id="expandBtn">Expand/Retract Image</button>
+												<div id="Function Management 3.png" style="display:none">
+												  <img src="../images/Function Management 3.png" alt="Function Management 3.png"><br>
+												</div>
+												<br>
+
+												<button onclick="toggleVideoExpand('RunningExample14.mp4', 'RunningExample14.mp4', 366)" id="expandBtn">Expand/Retract Video</button>
+												<div id="RunningExample14.mp4" style="display:none">
+												  <video id="RunningExample14.mp4" controls>
+													<source src="../images/RunningExample.mp4" type="video/mp4">
+													Your browser does not support the video tag.
+												  </video>
+												</div>
+												<br>
+											</div>
+										</div>
+										<br>
+
+										8.4.3. A list of all functions that are called in the functions that you have selected is also available.<br>
+
+										<button onclick="toggleExpand('Function Management 4.png')" id="expandBtn">Expand/Retract Image</button>
+										<div id="Function Management 4.png" style="display:none">
+										  <img src="../images/Function Management 4.png" alt="Function Management 4.png"><br>
+										</div>
+										<br>
+
+										<button onclick="toggleVideoExpand('RunningExample15.mp4', 'RunningExample15.mp4', 383)" id="expandBtn">Expand/Retract Video</button>
+										<div id="RunningExample15.mp4" style="display:none">
+										  <video id="RunningExample15.mp4" controls>
+											<source src="../images/RunningExample.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										  </video>
+										</div>
+										<br>
+										
+										8.4.4. To remove a selected function:<br>
+										<div class="codeIndentClass">
+											8.4.4.1. Select the function you want to remove from the drop down.<br>
+
+											<button onclick="toggleExpand('Function Management 5.png')" id="expandBtn">Expand/Retract Image</button>
+											<div id="Function Management 5.png" style="display:none">
+												<img src="../images/Function Management 5.png" alt="Function Management 5.png"><br>
+											</div>
+											<br>
+
+											<button onclick="toggleVideoExpand('RunningExample16.mp4', 'RunningExample16.mp4', 408)" id="expandBtn">Expand/Retract Video</button>
+											<div id="RunningExample16.mp4" style="display:none">
+												<video id="RunningExample16.mp4" controls>
+													<source src="../images/RunningExample.mp4" type="video/mp4">
+													Your browser does not support the video tag.
+												</video>
+											</div>
+											<br>
+
+											8.4.4.2. Once selected press the "Remove" button to remove the button from the selection.<br>
+
+											<button onclick="toggleExpand('Function Management 6.png')" id="expandBtn">Expand/Retract Image</button>
+											<div id="Function Management 6.png" style="display:none">
+												<img src="../images/Function Management 6.png" alt="Function Management 6.png"><br>
+											</div>
+											<br>
+
+											<button onclick="toggleVideoExpand('RunningExample17.mp4', 'RunningExample17.mp4', 413)" id="expandBtn">Expand/Retract Video</button>
+											<div id="RunningExample17.mp4" style="display:none">
+												<video id="RunningExample17.mp4" controls>
+												  <source src="../images/RunningExample.mp4" type="video/mp4">
+												  Your browser does not support the video tag.
+												</video>
+											</div>
+											<br>
+
+											8.4.4.3. Alternately, you can press the "RemoveAll" button to remove all the selected functions.<br>
+
+											<button onclick="toggleExpand('Function Management 7.png')" id="expandBtn">Expand/Retract Image</button>
+											<div id="Function Management 7.png" style="display:none">
+												<img src="../images/Function Management 7.png" alt="Function Management 7.png"><br>
+											</div>
+											<br>
+											
+											<button onclick="toggleVideoExpand('RunningExample18.mp4', 'RunningExample18.mp4', 427)" id="expandBtn">Expand/Retract Video</button>
+											<div id="RunningExample18.mp4" style="display:none">
+											  <video id="RunningExample18.mp4" controls>
+												<source src="../images/RunningExample.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											  </video>
+											</div>
+											<br>
+										</div>
+										<br>
+
+										8.4.5. Once you have selected your desired functions to convert to models, select your level of compactness.  
+										The level of compactness does not have any functional impact on the generated model,  
+										but rather it is more cosmetic. It depends on the user which option they opt.<br>
+
+										<button onclick="toggleExpand('Function Management 8.png')" id="expandBtn">Expand/Retract Image</button>
+										<div id="Function Management 8.png" style="display:none">
+										  <img src="../images/Function Management 8.png" alt="Function Management 8.png"><br>
+										</div>
+										<br>
+
+										<button onclick="toggleVideoExpand('RunningExample19.mp4', 'RunningExample19.mp4', 441)" id="expandBtn">Expand/Retract Video</button>
+										<div id="RunningExample19.mp4" style="display:none">
+										  <video id="RunningExample19.mp4" controls>
+											<source src="../images/RunningExample.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										  </video>
+										</div>
+										<br>
+
+										8.4.6. Write the name you would like to give to the generated xml (UPPAAL model file).<br>
+
+										<button onclick="toggleExpand('Function Management 9.png')" id="expandBtn">Expand/Retract Image</button>
+										<div id="Function Management 9.png" style="display:none">
+										  <img src="../images/Function Management 9.png" alt="Function Management 9.png"><br>
+										</div>
+										<br>
+
+										<button onclick="toggleVideoExpand('RunningExample20.mp4', 'RunningExample20.mp4', 455)" id="expandBtn">Expand/Retract Video</button>
+										<div id="RunningExample20.mp4" style="display:none">
+										  <video id="RunningExample20.mp4" controls>
+											<source src="../images/RunningExample.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										  </video>
+										</div>
+										<br>
+										
+										8.4.7. When you want to generate the model, click on the "Finish" button.<br>
+
+										<button onclick="toggleExpand('Function Management 10.png')" id="expandBtn">Expand/Retract Image</button>
+										<div id="Function Management 10.png" style="display:none">
+										  <img src="../images/Function Management 10.png" alt="Function Management 10.png"><br>
+										</div>
+										<br>
+
+										<button onclick="toggleVideoExpand('RunningExample21.mp4', 'RunningExample21.mp4', 465)" id="expandBtn">Expand/Retract Video</button>
+										<div id="RunningExample21.mp4" style="display:none">
+										  <video id="RunningExample21.mp4" controls>
+											<source src="../images/RunningExample.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										  </video>
+										</div>
+										<br>
+
+										8.4.8. Once the finish button has been pressed, the tool will do the following:<br>
+										<div class="codeIndentClass">
+										  8.4.8.1. The tool will generate an xml with the name you specified (ref 8.4.6) in the Directory you specified (ref 8.2.2).<br>
+										  8.4.8.2. The tool will generate log files in the Directory you specified (ref 8.2.1).<br>
+										  8.4.8.3. The tool will take you back to the "Files Management Screen".<br>
+										</div>
+										<br>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<h1 id="heading9">9. Form/Related Documents</h1>
+			<button onclick="toggleExpand('Form/Related Documents')" id="expandBtn">Expand/Retract Form/Related Documents</button>
+			<div id="Form/Related Documents" style="display:none">
+			  <div class="codeIndentClass">
+				The tool will produce an UPPAAL readable xml file. An example format is: 
+				<a href="./documents/RunningExample.rar" target="_blank">ref 3.2.3</a><br>
+			  </div>
+			</div>
+
+			<!-- Add more headings as needed -->
+		</div>
+	</body>
+</html>
+
+
+    
+
