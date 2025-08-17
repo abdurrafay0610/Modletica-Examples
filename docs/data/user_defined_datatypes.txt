@@ -1,0 +1,110 @@
+// Author: Abdur Rafay, Vara Ali
+// This file will be as it is copied to the UPPAAL xml
+
+// Purpose of file:
+// This file has some important declarations that are usually in-built in C code or the
+// compiler
+// Hence, these declarations are not found in the code. So we need to provide them here in
+// this file.
+
+// Important Notice:
+// Only make changes to this file if you know UPPAAL syntax. Otherwise, leave this file as
+// it is.
+
+const int int8_smin = -128;
+const int int8_smax = 127;
+const int int8_umin = 0;
+const int int8_umax = 255;
+const int int16_smin = -32768;
+const int int16_smax = 32767;
+const int int16_umin = 0;
+const int int16_umax = 65535;
+const int int32_smin = -2147483648;
+const int int32_smax = 2147483647;
+const int float_min = -12768;
+const int float_max = 12767;
+
+typedef bool BOOL;
+typedef bool Bool;
+typedef bool BOOLEAN;
+typedef bool boolean;
+
+typedef int[int8_smin, int8_smax] char;
+typedef int[int8_umin, int8_umax] CHAR;
+typedef int[int8_umin, int8_umax] byte;
+typedef int[int8_umin, int8_umax] BYTE;
+typedef int[int8_umin, int8_umax] Byte;
+typedef int[int16_smin, int16_smax] short;
+typedef int[int16_umin, int16_umax] unsigned_short;
+
+// int32_smax because uppaal does not accept int32_umax
+typedef int[int32_umin, int32_smax] unsigned_int;
+
+typedef int[int8_umin, int8_umax] unsigned_char;
+typedef int[int8_umin, int8_umax] UNSIGNED_CHAR;
+typedef int[int8_umin, int8_umax] Unsigned_Char;
+typedef int[int8_umin, int8_umax] uchar;
+typedef int[int8_umin, int8_umax] uChar;
+typedef int[int8_umin, int8_umax] UChar;
+typedef int[int8_smin, int8_smax] INT8;
+typedef int[int8_smin, int8_smax] Int8;
+typedef int[int8_smin, int8_smax] int_8;
+typedef int[int8_smin, int8_smax] INT_8;
+typedef int[int8_smin, int8_smax] SINT8;
+typedef int[int8_smin, int8_smax] Sint8;
+typedef int[int8_smin, int8_smax] sint8;
+typedef int[int8_smin, int8_smax] sint_8;
+typedef int[int32_smin, int32_smax] SINT_32;
+typedef int[int32_smin, int32_smax] Sint_32;
+typedef int[int32_smin, int32_smax] SInt_32;
+typedef int[int32_smin, int32_smax] signed_int32;
+typedef int[int32_smin, int32_smax] Signed_Int32;
+typedef int[int32_smin, int32_smax] signed_Int32;
+typedef int[int32_smin, int32_smax] signed_Int_32;
+typedef int[int32_smin, int32_smax] signed_INT32;
+typedef int[int32_umin, int32_smax] UINT32;
+typedef int[int32_umin, int32_smax] UInt32;
+typedef int[int32_umin, int32_smax] Uint32;
+typedef int[int32_umin, int32_smax] uint32;
+typedef int[int32_umin, int32_smax] uint_32;
+typedef int[int32_umin, int32_smax] uintInt32;
+typedef int[int32_umin, int32_smax] UNSIGNED_INT32;
+typedef int[int32_umin, int32_smax] Unsigned_Int32;
+typedef int[int32_umin, int32_smax] unsigned_int32;
+
+typedef int[float_min, float_max] float;
+typedef int[float_min, float_max] FLOAT;
+
+// Cast Expression Start here
+
+byte_toByte(int var)
+{
+    // improve this
+    return (var % int8_smax);
+}
+
+char_toChar(int var)
+{
+    // improve this
+    return (var % int8_smax);
+}
+
+short_toUShort(int var)
+{
+    // do something here
+    return var;
+}
+
+short_toShort(int var)
+{
+    // improve this
+    return (var % int16_smax);
+}
+
+int_toInt(int var)
+{
+    // improve this
+    return (var % int32_smax);
+}
+
+
