@@ -1,6 +1,6 @@
 # 🧠 Modletica C-to-UPPAAL Mapping Repository
 
-This repository contains a curated set of **C code snippets** and their corresponding **UPPAAL models**, automatically extracted using [Modletica](https://github.com/your-modletica-link) — a tool for transforming C programs into formally verifiable **finite state machines (FSMs)** compatible with UPPAAL.
+This repository contains a curated set of **C code snippets** and their corresponding **UPPAAL models**, automatically extracted using [Modletica](https://github.com/abdurrafay0610/Modletica), a tool for transforming C programs into formally verifiable **finite state machines (FSMs)** compatible with UPPAAL.
 
 ## 🚀 Purpose
 
